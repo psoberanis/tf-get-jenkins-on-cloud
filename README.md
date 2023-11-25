@@ -20,4 +20,4 @@ This terraform code will install Jenkins in cloud and get you IP and URL details
 - docker build step
 - docker pipeline
 - delivery pipeline
-- docker plugins 
+- docker common plugins 
