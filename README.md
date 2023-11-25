@@ -11,7 +11,12 @@ This terraform code will install Jenkins in cloud and get you IP and URL details
    ```
    terraform apply
     ```
-4. Install Following plugins after you login to jenkins
+
+4. Get initial admin password, use this command
+   ```
+   sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+   ```
+6. Install Following plugins after you login to jenkins
 - docker build step
 - docker pipeline
 - delivery pipeline
