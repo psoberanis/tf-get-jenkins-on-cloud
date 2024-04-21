@@ -37,13 +37,14 @@ This terraform code will install Jenkins in cloud and get you IP and URL details
 
    ![image](https://github.com/jvsocial/tf-get-jenkins-on-cloud/assets/78414554/49ccc60e-8084-42a2-be67-618a5746e098)
 
-5. Delivery details
-   - VM EC2 Created 
-   - Ansible installed
-   - Jenkins installed using Ansbile 
-
+  
    
-7. Install Following plugins after you login to jenkins
+5.  Install Following plugins after you login to jenkins
    - docker pipeline
    - delivery pipeline
    - docker common plugins 
+
+6. Delivery details
+   - VM EC2 Created 
+   - Ansible installed
+   - Jenkins installed using Ansbile 
