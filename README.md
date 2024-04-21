@@ -39,7 +39,6 @@ This terraform code will install Jenkins in cloud and get you IP and URL details
 
    
 6. Install Following plugins after you login to jenkins
-   - docker build step
    - docker pipeline
    - delivery pipeline
    - docker common plugins 
