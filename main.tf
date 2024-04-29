@@ -6,7 +6,9 @@ provider "aws" {
 }
 
 resource "aws_instance" "project_demo" {
-  ami                    = "ami-06aa3f7caf3a30282" # Canonical, Ubuntu, 20.04 LTS, amd64 focal image build on 2023-10-25
+  ami = "ami-04b70fa74e45c3917" # Canonical, Ubuntu, 24.04 LTS, amd64 noble image build on 2024-04-23
+  #ami                    = "ami-0e001c9271cf7f3b9" #Canonical, Ubuntu, 22.04 LTS, amd64 jammy image build on 2024-04-11
+  #ami                    = "ami-06aa3f7caf3a30282" # Canonical, Ubuntu, 20.04 LTS, amd64 focal image build on 2023-10-25
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.demo.id]
 
@@ -19,10 +21,10 @@ resource "aws_instance" "project_demo" {
               #!/bin/bash
               sudo apt-get update
               sudo apt-get install -y ansible
-              git clone https://github.com/javeedsocial/setup-jenkins-ubuntu20.git
-              sudo ansible-playbook setup-jenkins-ubuntu20/setup-jenkins.yaml
+              git clone https://github.com/jvsocial/setup-jenkins-on-aws-ubuntu.git
+              sudo ansible-playbook ssetup-jenkins-on-aws-ubuntu/setup-jenkins-ubuntu.yaml
+              sudo cat /var/lib/jenkins/secrets/initialAdminPassword > jenkinspass.txt
               EOF
-
 }
 
 resource "aws_security_group" "demo" {
