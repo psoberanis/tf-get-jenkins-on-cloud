@@ -90,11 +90,3 @@ resource "aws_security_group" "demo" {
 
 
 }
-
-output "public_ip" {
-  value = aws_instance.project_demo.public_ip
-}
-
-output "Message" {
-  value = "It takes 5mins to setup EC2 and get jenkins ready for you, check on port 8080"
-}
