@@ -1,9 +1,18 @@
+# main.tf
 provider "aws" {
-  access_key = "XXXXXXXXXXXXXXXX" ## replace with your access key
-  secret_key = "XXXXXXXXXXXXXXXXXXXXX" ## replace with your secret key
-  token      = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" ## replace with token 
-  region     = "us-east-1"
+  access_key = var.aws_access_key
+  secret_key = var.aws_secret_key
+  token      = var.aws_token
+  region     = var.aws_region
 }
+
+
+#provider "aws" {
+# access_key = "XXXXXXXXXXXXXXXX" ## replace with your access key
+# secret_key = "XXXXXXXXXXXXXXXXXXXXX" ## replace with your secret key
+#token      = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" ## replace with token 
+#region     = "us-east-1"
+#}
 
 resource "aws_instance" "project_demo" {
   ami = "ami-04b70fa74e45c3917" # Canonical, Ubuntu, 24.04 LTS, amd64 noble image build on 2024-04-23
