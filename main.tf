@@ -31,7 +31,7 @@ resource "aws_instance" "project_demo" {
               sudo apt-get update
               sudo apt-get install -y ansible
               git clone https://github.com/jvsocial/setup-jenkins-on-aws-ubuntu.git
-              sudo ansible-playbook ssetup-jenkins-on-aws-ubuntu/setup-jenkins-ubuntu.yaml
+              sudo ansible-playbook setup-jenkins-on-aws-ubuntu/setup-jenkins-ubuntu.yaml
               sudo cat /var/lib/jenkins/secrets/initialAdminPassword > jenkinspass.txt
               EOF
 }
